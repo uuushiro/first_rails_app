@@ -1,0 +1,17 @@
+<% if user_signed_in? %>
+  <aside class="sidebar">
+    <%= render 'notes/form' %>
+  </aside>
+  <ul class="notes">
+    <h2>投稿の一覧</h2>
+    <%= render @notes %>
+  </ul>
+<% else %>
+  <div class="top-wrapper">
+    <%= image_tag "gatebook_cover.png" %>
+    <div class="register-wrapper">
+      <h1><%= @message %></h1>
+      <%= link_to "新規登録", new_user_registration_path, class: "btn btn-large register-btn" %>
+    </div>
+  </div>
+<% end %>
