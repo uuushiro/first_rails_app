@@ -8,12 +8,20 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :users do
+    member do
+      get :following, :followers
+    end
+  end
+
   # memberを使ってliking_usersのルーティングを定義してください
   resources :notes, only: [:show, :create, :edit, :update, :destroy] do
     member do
       get :liking_users
     end
   end
+
+  resources :relationships,       only: [:create, :destroy]
 
   post '/like/:note_id' => 'likes#like', as: 'like'
   delete '/unlike/:note_id' => 'likes#unlike', as: 'unlike'

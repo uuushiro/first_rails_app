@@ -6,6 +6,12 @@
     </p>
   </section>
 
+  <%= render 'follow_form' if logged_in? %>
+
+  <section class="stats">
+  <%= render 'shared/stats' %>
+  </section>
+
   <section>
     <span class="label">ユーザー</span>
     <h3 class="user-info"><%= @user.name %></h3>
