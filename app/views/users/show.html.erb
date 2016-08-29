@@ -1,9 +1,9 @@
 <aside class="sidebar">
   <section>
     <span class="label">プロフィール画像</span>
-    <h3 class="user-info">
+    <p class="user-info">
       <%= image_for(@user) %>
-    </h3>
+    </p>
   </section>
 
   <section>
@@ -20,7 +20,7 @@
 
   <% if current_user?(@user) %>
     <section>
-      <small><%= link_to 'プロフィールを編集', edit_user_path(@user) %></small>
+      <p><%= link_to 'プロフィールを編集', edit_user_path(@user) %></p>
     </section>
   <% end %>
 

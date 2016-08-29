@@ -169,6 +169,17 @@ footer small {
   text-decoration: none;
 }
 
+/* 「JUSTONE」ボタン */
+.justone-btn {
+  color: #239b76;
+}
+
+.justone-btn:hover {
+  background-color: #28b086;
+  color: white;
+  text-decoration: none;
+}
+
 /* フォーム================================ */
 input, textarea, select {
   border: 1px solid #bbb;
