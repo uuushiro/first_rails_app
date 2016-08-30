@@ -41,5 +41,13 @@ class User < ActiveRecord::Base
      following.include?(other_user)
    end
 
+   def matchers
+    requester_ids = passive_relationships.pluck(:follower_id)
+    active_relationships
+      .eager_load(:followed)
+      .select { |r| requester_ids.include? r.followed_id }
+      .map { |r| r.followed }
+  end
+
 
 end

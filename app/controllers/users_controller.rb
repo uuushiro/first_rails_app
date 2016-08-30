@@ -29,22 +29,29 @@ class UsersController < ApplicationController
   end
 
   def like_notes
-    @notes = @user.like_notes
     @title = "いいね！一覧"
+    @notes = @user.like_notes
     render :show
   end
 
   def following
-    @title = "Following"
+    @title = "JUSTONEしています"
     @user  = User.find(params[:id])
     @users = @user.following
     render 'show_follow'
   end
 
   def followers
-    @title = "Followers"
+    @title = "JUSTONEされています"
     @user  = User.find(params[:id])
     @users = @user.followers
+    render 'show_follow'
+  end
+
+  def matching
+    @title = "マッチングしています"
+    @user = User.find(params[:id])
+    @users = @user.matchers
     render 'show_follow'
   end
 

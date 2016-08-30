@@ -171,13 +171,28 @@ footer small {
 
 /* 「JUSTONE」ボタン */
 .justone-btn {
-  color: #239b76;
+  font-size: 30px;
+  background-color: #f04036;
 }
 
+
 .justone-btn:hover {
-  background-color: #28b086;
+  background-color: #f04036;
   color: white;
   text-decoration: none;
+}
+
+.notjustone-btn {
+  font-size: 30px;
+}
+
+.notjustone-btn:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.matchings {
+  color: red;
 }
 
 /* フォーム================================ */
