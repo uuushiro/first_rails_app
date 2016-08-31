@@ -25,7 +25,7 @@ Rails.application.routes.draw do
   end
 
   post '/talks' => 'talks#create'
-  get '/talk/index/:id' => 'talks#index'
+  get '/talks/:id' => 'talks#index'
 
 
 

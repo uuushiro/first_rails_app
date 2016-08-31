@@ -1,6 +1,7 @@
 <li>
   <%= image_for(user) %>
-  <%= link_to user.name+"とトーク", talks_index_path(user) %>
-  <%= link_to user.name, user %> |
-  <%= user.email %>
+  <% if current_user.matchers.include?(user) %>
+  <%= link_to user.name+"とトーク", "/talks/#{user.id}",class: "gotalk" %>
+  <% end %>
+  <%= link_to user.name, user %>
 </li>

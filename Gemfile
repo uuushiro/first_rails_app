@@ -26,6 +26,7 @@ gem 'hirb', '0.7.3'
 gem 'devise', '3.5.1'
 gem 'websocket-rails'
 gem 'faye-websocket', '0.10.0'
+gem 'squeel'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

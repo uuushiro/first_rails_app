@@ -1,3 +1,4 @@
+<% if current_user?(@user) %>
 <% @user ||= current_user %>
 <div class="stats">
   <a href="<%= following_user_path(@user) %>">
@@ -18,3 +19,4 @@
   </a></br>
 </div>
   <% end %>
+<% end %>
