@@ -10,7 +10,7 @@
       </ul>
     </div>
   <% end %>
-  <%= hidden_field_tag :to_id, @user.id %>
+  <%= f.hidden_field :to_id, :value => @user.id %>
   <%= f.text_area :content,  class: "form-control content-field" %>
   <%= f.submit "送信",  class: "btn primary-btn" %>
 <% end %>
