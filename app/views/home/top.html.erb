@@ -10,7 +10,13 @@
   <div class="top-wrapper">
     <div class="register-wrapper">
       <h1><%= @message %></h1>
-      <%= link_to "新規登録", new_user_registration_path, class: "btn btn-large register-btn" %>
+      <h2>このサービスのコンセプトは「コーヒー一杯で素敵な出会いを」です。従来の恋愛マッチングサービスに比べて、
+        気軽にデートすることができます。</h2></br>
+      <h1>こんな経験ありませんか？</h1>
+      <h2>「思っていた人と違う人が来て、早く帰りたい。。」 ←　大丈夫です！一杯だけ飲んでさっさと帰りましょう。</h2>
+      <h2>「あー、デート代って結構かかるよなあ。。」　←　大丈夫です！一杯おごるだけです。</h2>
+      <h2>「出会いは欲しいけど、時間がないわ。。」　←　大丈夫です！会社の昼休みにサクッと出会っちゃいましょう。</h2>
+      <%= link_to "新規登録はこちらから！", new_user_registration_path, class: "btn btn-large register-btn" %>
     </div>
   </div>
 <% end %>
