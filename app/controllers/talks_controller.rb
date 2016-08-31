@@ -4,7 +4,7 @@ class TalksController < ApplicationController
     @talk = Talk.new(talk_params)
     @talk.from_id = current_user.id
     if @talk.save
-      render 'home/about'
+      redirect_to(:back)
     else
       render 'home/top'
     end
