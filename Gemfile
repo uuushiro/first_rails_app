@@ -24,7 +24,8 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'hirb', '0.7.3'
 gem 'devise', '3.5.1'
-
+gem 'websocket-rails'
+gem 'faye-websocket', '0.10.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
