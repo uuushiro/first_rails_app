@@ -55,6 +55,9 @@ class UsersController < ApplicationController
     render 'show_follow'
   end
 
+  def chat
+    @user = User.find(params[:id])
+  end
 
 
   private

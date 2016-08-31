@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'talks/new'
+
+  get 'receivers/show'
+
   devise_for :users
 
   resources :users, only: [:index, :show, :edit, :update] do
@@ -20,11 +24,10 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :users do
-    member do
-      get :chat
-    end
-  end
+  post '/talks' => 'talks#create'
+  get '/talk/index/:id' => 'talks#index'
+
+
 
   # memberを使ってliking_usersのルーティングを定義してください
   resources :notes, only: [:show, :create, :edit, :update, :destroy] do

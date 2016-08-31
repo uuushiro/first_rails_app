@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
          :validatable
   has_many :notes
   has_many :likes
+  has_many :talks
   has_many :like_notes, through: :likes, source: :note
   has_many :active_relationships, class_name:  "Relationship",
                                 foreign_key: "follower_id",

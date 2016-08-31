@@ -1,5 +1,6 @@
 <li>
   <%= image_for(user) %>
+  <%= link_to user.name+"とトーク", talks_index_path(user) %>
   <%= link_to user.name, user %> |
   <%= user.email %>
 </li>

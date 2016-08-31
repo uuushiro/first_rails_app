@@ -2,8 +2,11 @@
   <input id="text_input">
   <input type="submit">
 </form>
-<ul id="msg_box">
+<ul id="msg_box" name="message_text">
 </ul>
+
+
+
 <script>
   var dispatcher = new WebSocketRails("localhost:3000/websocket"); //ドメインは適宜変える
   var form = document.getElementById("form");
