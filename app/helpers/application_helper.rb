@@ -3,7 +3,6 @@ module ApplicationHelper
     current_user.id == user.id
   end
 
-
   # ユーザーがログインしていればtrue、その他ならfalseを返す
   def logged_in?
     !current_user.nil?

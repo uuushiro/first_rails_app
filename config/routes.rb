@@ -1,6 +1,14 @@
 Rails.application.routes.draw do
 
-  get 'talks/new'
+  root 'home#top'
+
+  post '/like/:note_id' => 'likes#like', as: 'like'
+  delete '/unlike/:note_id' => 'likes#unlike', as: 'unlike'
+
+  get '/about' => 'home#about'
+
+  post '/talks' => 'talks#create'
+  get '/talks/:id' => 'talks#index'
 
   get 'receivers/show'
 
@@ -24,12 +32,7 @@ Rails.application.routes.draw do
     end
   end
 
-  post '/talks' => 'talks#create'
-  get '/talks/:id' => 'talks#index'
 
-
-
-  # memberを使ってliking_usersのルーティングを定義してください
   resources :notes, only: [:show, :create, :edit, :update, :destroy] do
     member do
       get :liking_users
@@ -38,11 +41,6 @@ Rails.application.routes.draw do
 
   resources :relationships,       only: [:create, :destroy]
 
-  post '/like/:note_id' => 'likes#like', as: 'like'
-  delete '/unlike/:note_id' => 'likes#unlike', as: 'unlike'
-
-  root 'home#top'
-  get '/about' => 'home#about'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

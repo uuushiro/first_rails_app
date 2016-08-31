@@ -1,4 +1,8 @@
 class HomeController < ApplicationController
+
+  def index
+  end
+
   def top
     if user_signed_in?
       @note = Note.new

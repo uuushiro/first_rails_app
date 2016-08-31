@@ -2,7 +2,6 @@
   <% if @note.errors.any? %>
     <div id="error_explanation" class="alert alert-danger">
       <h2><%= @note.errors.count %>件のエラー:</h2>
-
       <ul>
         <% @note.errors.full_messages.each do |message| %>
           <li><%= message %></li>

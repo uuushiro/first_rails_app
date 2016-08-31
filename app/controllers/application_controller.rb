@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.for(:sign_up) << :name
   end
 
-  # ユーザーのログインを確認する
+  # ユーザーのログインを確認
   def logged_in_user
     unless logged_in?
       store_location

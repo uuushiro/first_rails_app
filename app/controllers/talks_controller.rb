@@ -10,6 +10,7 @@ class TalksController < ApplicationController
     end
   end
 
+#マッチングしたユーザ間でのトーク履歴を返す
   def index
     @talk = Talk.new
     @user = User.find(params[:id])
@@ -27,7 +28,3 @@ private
   end
 
 end
-
-    # @talks = Talk.where{(Talk.arel_table[:to_id].eq(current_user.id)).and(Talk.arel_table[:from_id].eq(@user.id))}.or{(Talk.arel_table[:to_id].eq(@user.id)).and(Talk.arel_table[:from_id].eq(current_user.id))}.order(created_at: :desc)
-    #
-    # @talks = Talk.where{(Talk.arel_table[:to_id].eq(current_user.id))&&(Talk.arel_table[:from_id].eq(@user.id))}||{(Talk.arel_table[:to_id].eq(@user.id))&&(Talk.arel_table[:from_id].eq(current_user.id))}.order(created_at: :desc)

@@ -2,7 +2,6 @@
   <% if @talk.errors.any? %>
     <div id="error_explanation" class="alert alert-danger">
       <h2><%= @talk.errors.count %>件のエラー:</h2>
-
       <ul>
         <% @talk.errors.full_messages.each do |message| %>
           <li><%= message %></li>
